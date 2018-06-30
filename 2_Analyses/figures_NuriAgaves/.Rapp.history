@@ -1,0 +1,47 @@
+xA1 <- read.table("~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/1shift_NuriAgaves/1shift_cladeA1_stem_2016.10.20.xls", header=TRUE)
+xA1
+BlinA1 <- function(t){xA1[1,"lambda"] + xA1[1,"alfa"] * t}
+DconsA1 <- xA1[1,"mu"]# puede ser la fila dos también, pero son prácticamente iguales
+rlinA1<-function(t){BlinA1(t)-DconsA1}
+plot(x=NULL, main=NULL, xlab="", ylab="", xlim=c(whole.age,0), ylim=c(-1,2), axes=FALSE)
+lapply(as.list(c("ape", "picante", "geiger","phyloch")), require, character.only=TRUE)#
+agave <- read.beast("~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/Archivos11.2013/Agave5_14Nov13.TreeAnnOut_nombresPub")
+stem.age1 <- branching.times(agave)['57']
+stem.age2 <- stem.age1
+whole.age <- branching.times(agave)['50']
+plot(x=NULL, main=NULL, xlab="", ylab="", xlim=c(whole.age,0), ylim=c(-1,2), axes=FALSE)
+axis(2, at=seq(-1,2,1), labels=T)
+abline(h=0, col="gray")
+curve(expr=BlinA1, from=stem.age1, to=0, add=TRUE, col="purple", lwd=1.2, lty="dotted")
+segments(x0=stem.age1, x1=0, y0=DconsA1, y1=DconsA1, col="purple", lwd=1.2, lty="longdash")
+curve(expr=rlinA1, from=stem.age1, to=0, add=TRUE, col="purple", lwd=2)
+pdf(file="~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/figures_NuriAgaves/Agaves_lin_rpanda.pdf", height= 3.5, width=4.5)#
+plot(x=NULL, main=NULL, xlab="", ylab="", xlim=c(whole.age,0), ylim=c(-1,2), axes=FALSE)#
+axis(2, at=seq(-1,2,1), labels=T)#
+abline(h=0, col="gray")#
+curve(expr=BlinA1, from=stem.age1, to=0, add=TRUE, col="purple", lwd=1.2, lty="dotted")#
+# curve(expr=BexpA1, from=stem.age1, to=0, add=TRUE, col="purple", lwd=1.2, lty="dotted")#
+segments(x0=stem.age1, x1=0, y0=DconsA1, y1=DconsA1, col="purple", lwd=1.2, lty="longdash")#
+curve(expr=rlinA1, from=stem.age1, to=0, add=TRUE, col="purple", lwd=2)#
+dev.off()
+ls()
+stem/age1
+stem.age1
+ls()
+agave.table <- read.beast.table("~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/Archivos11.2013/Agave5_14Nov13.TreeAnnOut_nombresPub")
+head(agave.table)
+write.table(agave.table, file="~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/agave.nodes.xls")
+write.table(agave.table, file="~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/agave.nodes.xls", sep="\t", quote=FALSE)
+write.table(agave.table, file="~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/agave.nodes.xls", sep="\t", quote=FALSE, row.names=FALSE)
+TREE <- read.tree("~/Google Drive/GoogleDrive.7nov2014/Analysis/Roberto/datos.2marzo2016/wholeOK.new")
+pdf(file="~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/figures_RobertoBats/wholeOK_nodelabels.pdf", height=30)#
+plot(ladderize(TREE, right=FALSE), cex=0.5)#
+edgelabels(cex=0.5)#
+dev.off()
+pdf(file="~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/figures_RobertoBats/wholeOK_nodelabels.pdf", height=30)#
+plot(ladderize(TREE, right=FALSE), cex=0.5)#
+nodelabels(cex=0.5)#
+dev.off()
+write.table(phyllos.table, file="~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/figures_RobertoBats/phyllostomidae.nodes.xls", sep="\t", quote=FALSE, row.names=FALSE)
+phyllos.table <- read.beast.table("~/Google Drive/GoogleDrive.7nov2014/Analysis/Roberto/ConcatenadoTimes.TreeAnnOut")
+write.table(phyllos.table, file="~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/figures_RobertoBats/phyllostomidae.nodes.xls", sep="\t", quote=FALSE, row.names=FALSE)

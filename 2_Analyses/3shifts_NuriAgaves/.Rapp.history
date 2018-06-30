@@ -1,0 +1,332 @@
+matriz2
+rbind(matriz1, matriz2)
+cbind(iris.setosa, iris.versi)
+cbind(matriz1, matriz2)
+iris.versi
+iris.versi>6
+iris.versi[,-5]>6
+as.vector(iris.versi[,-5]>6)
+as.vector(iris.versi[,-5]>6)[1:20]
+eliminar <- as.vector(iris.versi[,-5]>6)
+iris.versi[eliminar,]
+iris.versi[!eliminar,]
+eliminar <- as.vector(iris.versi[,-5]>6)[1:20]
+iris.versi[!eliminar,1]
+iris.versi[!eliminar,]
+iris.versi[eliminar,]
+iris.versi[eliminar,] <- NA
+iris.versi
+iris.versi <- iris[51:70, ]
+iris.versi[eliminar,1] <- NA
+iris.versi
+mean(iris.versi)
+summary(iris.versi)
+iris.versi$Sepal.Length
+mean(iris.versi$Sepal.Length)
+iris.versi$Sepal.Length==NA
+iris.versi$Sepal.Length=="NA"
+is.na(iris.versi$Sepal.Length)
+eliminar <- is.na(iris.versi$Sepal.Length)
+iris.versi$Sepal.Length[eliminar]
+iris.versi$Sepal.Length[!eliminar]
+mean(iris.versi$Sepal.Length[!eliminar])
+mean(iris.versi$Sepal.Length, na.rm=TRUE)
+plot(1:10)
+plot(1:10, main="gráfica del viernes", xlab="índices", ylab="numeritos")
+legend(1, 9, legend="regresión lineal")
+help(legend)
+par()
+help(legend, pch=1)
+legend(1, 9, legend="regresión lineal", pch=1)
+plot(1:10, main="gráfica del viernes", xlab="índices", ylab="numeritos", col="red")
+legend(1, 9, legend="regresión lineal", pch=1, col="red")
+plot(1:10, main="gráfica del viernes", xlab="índices", ylab="numeritos", col="red", type="l")
+plot(1:10, main="gráfica del viernes", xlab="índices", ylab="numeritos", col="red", type="b")
+colores <- sample(colors(), 5)
+colores
+colors()
+mtext(side=1, "qué bonito!")
+mtext(side=2, "qué bonito!")
+mtext(side=3, "qué bonito!")
+mtext(side=4, "qué bonito!")# para subtítulos
+alpha
+expression(alpha + beta*x)
+legend(1,9, legend=expression(alpha=beta*x))
+plot(1:10, main="gráfica del viernes", xlab="índices", ylab="numeritos", col="red", type="b")
+legend(1,9, legend=expression(alpha+beta*x))
+legend(1,7, legend=expression(pi+gamma*x))
+legend(1,5, legend=expression(chiˆ2))
+legend(1,5, legend=expression(chi))
+3ˆ2
+legend(1,5, legend=expression(chi^2))
+plot(1:10, main="gráfica del viernes", xlab="índices", ylab="numeritos", col="red", type="b")
+legend(1,9, legend=expression(alpha+beta*x))#
+legend(1,7, legend=expression(pi+gamma*x))#
+legend(1,5, legend=expression(chi^2))
+plot(1:10, main="gráfica del viernes", xlab="índices", ylab="numeritos", col="red", type="b")
+mtext(side=3, "qué bonito!", font=2)# para subtítulos
+plot(1:10, main="gráfica del viernes", xlab="índices", ylab="numeritos", col="red", type="b")
+mtext(side=3, "qué bonito!", font=3)# para subtítulos
+mtext(side=3, "qué bonito!", font=3, cex=0.8)# para subtítulos
+plot(1:10, main="gráfica del viernes", xlab="índices", ylab="numeritos", col="red", type="b")
+mtext(side=3, "qué bonito!", font=3, cex=0.8)# para subtítulos
+axis(1, at=c(2,6,10), labels=c("a", "b", "c"))
+??tree
+rtree(5)
+library(ape)
+rtree(5)
+dev.new()
+rtree(5)
+rtree(n=5)
+arbol1 <- rtree(5)
+arbol1
+plot(arbol1)
+arbol1 <- rtree(10)
+arbol1
+plot(arbol1)
+?write
+??write
+class(arbol1)
+write.tree(arbol1, "arbol1.new")
+save(arbol1, "arbol1.RData")
+save(arbol1, file="arbol1.RData")
+load("/Users/Maria/arbol1.RData")
+rm(arbol1)
+arbol1
+ls()
+read.tree("arbol1.new")
+arbol1.releido <- read.tree("arbol1.new")
+arbol1.releido
+plot(arbol1.releido)
+?plot.phylo
+par()
+par(mfrow=c(2,2))
+plot(arbol1.releido, type="phylogram")
+plot(arbol1.releido, type="fan")
+plot(arbol1.releido, type="radial")
+plot(arbol1.releido, type="cladogram")
+rtree(10, br=1)
+arbol2 <- rtree(10, br=1)
+par(mfrow=c(1,1))
+ot(arbol2)
+plot(arbol2)
+plot(arbol2, font=1)
+plot(arbol2, font=2)
+plot(arbol2, font=3)
+plot(arbol2, font=4)
+plot(arbol2, cex=0.5)
+plot(arbol2, cex=0.5, adj=1)
+plot(arbol2, cex=0.5, adj=0.5)
+plot(arbol2, cex=0.5, adj=10)
+plot(arbol2, edge.color="red)
+plot(arbol2, edge.color="red")
+plot(arbol2, edge.color="red", cex=0.8)
+plot(arbol2, edge.color="red", cex=0.8, adj=3)
+plot(arbol2, edge.color="red", cex=0.8, adj=1)
+plor(arbol2, edge.width=2)
+plot(arbol2, edge.width=2)
+for(i in 1:6){#
+	plot(arbol2, edge.lty=i)#
+}
+mode(arbol2)
+length(arbol2)
+arbol2[1]
+arbol[2]
+arbol2[2]
+arbol2[2] <- as.character(1:10)
+arbol2[2]
+arbol2[[2]] <- as.character(1:10)
+arbol2[[2]]
+plot(arbol2)
+arbol2[3]
+arbol2[4]
+arbol2[1]
+edgelabels(as.character(1:19), 1:19)
+edgelabels(as.character(1:18), 1:18)
+tipo.linea <- rep(1,18)
+tipo.linea
+tipo.linea[5:6] <- 3
+tipo.linea
+plot(arbol2, edge.lty=tipo.linea)
+plot(1:10)
+plot(1:10, yaxt="n")
+plot(1:10, yaxt="n", ann=FALSE)
+plot(1:10, yaxt="n", xaxt="n", ann=FALSE)
+plot(1:10, yaxt="n", xaxt="n", ann=FALSE, bty="n")
+plot(1:10, ann=FALSE, bty="n")
+plot(1:10, axes=FALSE)
+plot(1:10, axes=FALSE, frame.plot=TRUE)
+plot(1:10, labels=FALSE)
+plot(1:10, ann=FALSE)
+plot(1:10, bty=FALSE)
+plot(1:10, ann=FALSE, bty="n")
+plot(1:10, bty="n")
+plot(1:10, frame.plot=FALSE)
+plot(1:10, bty="l")
+plot(1:10, bty="7")
+plot(1:10, bty="c")
+plot(1:10, bty="u")
+plot(1:10, bty="]")
+plot(box, col="red")
+plot("box", col="red")
+lm
+0.32-0.37
+0.37/0.32
+PATH2 <- "~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_abr2016/"#
+model <- c(#
+expression("Among clade variation with independent rates", #
+paste("lambda var gamma (", lambda[0]== 0.01, ", 0.5), ", alfa== 0.05, "; cons moderate ext (", mu== 0.5*lambda, ")"),#
+paste("High origination rate (", phi==0.65, ")")))
+source('~/Google Drive/Analysis/Simulaciones.2/3.Distributions/levelSpearman.graph.V1.2.R')#
+source('~/Google Drive/Analysis/Simulaciones.2/3.Distributions/levelSpearman.graph.V1.3.R')#
+load("~/Google Drive/Analysis/Simulaciones.2/2.2_exploraciones(sim2.bd.origin.clade)/spearman/B.4009d.rhoV2.RData")#
+B.4009d.rhoV2$crown.rho.table
+B.4009d.rhoV2$stem1.rho.table
+B.4009d.rhoV2$stem2.rho.table
+name<- "spearman/ind/_gamma/0.5/9_B.4009d"#
+x.name <- "B.4009d.rhoV2"#
+HXScale <- c(0.1, 0.1, 0.25, 0.2, 0.15, 0.15, 0.15, 0.2, 0.18, 0.15, 0.15, 0.1, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09)#
+length(HXScale)
+HXScale <- c(0.1, 0.1, 0.25, 0.2, 0.15, 0.15, 0.15, 0.2, 0.18, 0.15, 0.15, 0.1, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09, 0.09)
+length(HXScale)
+Y.AXIS <- c(-1,1)#
+atY <- c(-1,-0.5,0,0.5,1)#
+SB2 <- SB1 <- 0.05#
+L2P <- 4:9#
+HXScale2 <- HXScale[L2P]#
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_ago2015/spearman/_graphs_spearman.ago2015.R')#
+L2P <- c(3,5,7,9,11,13)#
+HXScale2 <- HXScale[L2P]#
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_mar2016/_graphs_spearman.mar2016.R')
+source('~/Google Drive/Analysis/Simulaciones.2/3.Distributions/levelSpearman.graph.V1.2.R')
+3500000000/80
+3500000000/50
+?rgamma
+hist(rgamma(1000, 0.1))
+PATH2 <- "~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_abr2016/"#
+model <- c(#
+expression("DDlin among clade variation (K from [50:500])", #
+paste("lambda var (", lambda[0]== 0.2, ") ; low ext (", mu== 0.2*lambda, ")"),#
+paste("High origination (", phi==0.65, ")")))#
+load('~/Google Drive/Analysis/Simulaciones.2/2.2_exploraciones(sim2.bd.origin.clade)/pgls/B.1106c.ML.pglsV2.RData')
+name<- "MLpgls/DDlin/50a500/_lam0var/6_B.1106c.ML"#
+x.name <- "B.1106c.ML.pglsV2"#
+HXScale <- c(0.05, 0.09, 0.07, 0.055, 0.055, 0.053, 0.053, 0.065, 0.045, 0.045, 0.03, 0.03, 0.03, 0.02, 0.02, 0.015, 0.015, 0.015, 0.01, 0.005, 0.005, 0.005, 0.005)#
+length(HXScale)#
+Y.AXIS <- c(-0.35,0.35)#
+atY <- c(-0.35,-0.25,-0.125,0,0.125,0.25, 0.35)#
+SB2 <- SB1 <- 0.01#
+##################### gráficas V7:#
+source('~/Google Drive/simulaciones.3/levelCorr2.graph.V1.3.R')#
+L2P <- c(4,6,8,10,12,14)#
+HXScale2 <- HXScale[L2P]#
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_mar2016/_graphs_pgls.mar2016.R')
+SB2 <- SB1 <- 0.02#
+##################### gráficas V7:#
+source('~/Google Drive/simulaciones.3/levelCorr2.graph.V1.3.R')#
+L2P <- c(4,6,8,10,12,14)#
+HXScale2 <- HXScale[L2P]#
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_mar2016/_graphs_pgls.mar2016.R')
+HXScale2 <- c(0.07, 0.06, 0.04, 0.03, 0.02, 0.02)
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_mar2016/_graphs_pgls.mar2016.R')
+HXScale2 <- c(0.1, 0.08, 0.05, 0.033, 0.022, 0.02)
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_mar2016/_graphs_pgls.mar2016.R')
+HXScale2 <- c(0.11, 0.08, 0.05, 0.033, 0.022, 0.02)
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_mar2016/_graphs_pgls.mar2016.R')
+HXScale2 <- c(0.12, 0.08, 0.05, 0.033, 0.022, 0.02)
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_mar2016/_graphs_pgls.mar2016.R')
+load('~/Google Drive/Analysis/Simulaciones.2/2.2_exploraciones(sim2.bd.origin.clade)/pgls/B.1106c.ML.pglsV2.RData')#
+source('~/Google Drive/simulaciones.3/levelCorrLambda.graphV2.R')#
+#
+name<- "lambda/DDlin/50a500/_lam0var/6_B.1106c"#
+x.name <- "B.1106c.ML.pglsV2"#
+L2P <- c(4,6,8,10,12,14)#
+HXScale2 <- c(0.05, 0.058, 0.058, 0.053, 0.045, 0.045)#
+SB2 <- 0.05#
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_abr2016/_graphs_pglsLambda.abr2016.V2-6.R')
+HXScale2 <- c(0.07, 0.058, 0.059, 0.08, 0.08, 0.06)
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_abr2016/_graphs_pglsLambda.abr2016.V2-6.R')
+HXScale2 <- c(0.07, 0.058, 0.06, 0.15, 0.08, 0.06)
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_abr2016/_graphs_pglsLambda.abr2016.V2-6.R')
+HXScale2 <- c(0.07, 0.058, 0.06, 0.15, 0.1, 0.1)
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_abr2016/_graphs_pglsLambda.abr2016.V2-6.R')
+HXScale2 <- c(0.07, 0.058, 0.06, 0.2, 0.13, 0.08)
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_abr2016/_graphs_pglsLambda.abr2016.V2-6.R')
+HXScale2 <- c(0.07, 0.058, 0.06, 0.2, 0.13, 0.07)
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_abr2016/_graphs_pglsLambda.abr2016.V2-6.R')
+HXScale2 <- c(0.07, 0.058, 0.06, 0.2, 0.14, 0.08)
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_abr2016/_graphs_pglsLambda.abr2016.V2-6.R')
+HXScale2 <- c(0.07, 0.058, 0.06, 0.21, 0.14, 0.08)
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Age-richness/sims/_abr2016/_graphs_pglsLambda.abr2016.V2-6.R')
+t <- 1:100#
+sig2 <- 0.01#
+x <- rnorm(n=length(t)-1, sd=sqrt(sig2))#
+hist(x)
+X <- c(0, cumsum(x))
+hist(X)
+plot(t, X, type="l", ylim=c(-2,2))
+cumsum(x)
+x
+plot(t, x, type="l", ylim=c(-2,2))
+plot(t, c(0,x), type="l", ylim=c(-2,2))
+t <- 1:1000#
+sig2 <- 0.01#
+x <- rnorm(n=length(t)-1, sd=sqrt(sig2))#
+hist(x)
+plot(t, c(0,x), type="l", ylim=c(-2,2))
+X <- c(0, cumsum(x))
+hist(X)
+plot(t, X, type="l", ylim=c(-2,2))
+plot(t, X, type="l", ylim=c(-3,3))
+pdf(height=3, width=7, file="~/Google Drive/Presentations/articulos/ComparativeMethod/BrownianMotionGraph1.pdf")#
+plot(t, X, type="l", ylim=c(-3,3))#
+dev.off()
+plot(t, X, type="l", ylim=c(-3,3), lab.cex=0.5)
+plot(t, X, type="l", ylim=c(-3,3), cex.lab=0.5)
+plot(t, X, type="l", ylim=c(-3,3), cex.lab=0.8)
+plot(t, X, type="l", ylim=c(-3,3), cex.lab=0.8, cex.axis=0.8)
+pdf(height=3, width=7, file="~/Google Drive/Presentations/articulos/ComparativeMethod/BrownianMotionGraph1.pdf")#
+plot(t, X, type="l", ylim=c(-3,3), cex.lab=0.8, cex.axis=0.8)#
+dev.off()
+plot(t, X, type="l", ylim=c(-3,3), cex.lab=0.8, cex.axis=0.8, xlab="time")
+pdf(height=3, width=7, file="~/Google Drive/Presentations/articulos/ComparativeMethod/BrownianMotionGraph1.pdf")#
+plot(t, X, type="l", ylim=c(-3,3), cex.lab=0.8, cex.axis=0.8, xlab="Time")#
+dev.off()
+pdf(height=3, width=6, file="~/Google Drive/Presentations/articulos/ComparativeMethod/BrownianMotionGraph1.pdf")#
+plot(t, X, type="l", ylim=c(-3,3), cex.lab=0.8, cex.axis=0.8, xlab="Time")#
+dev.off()
+pdf(height=3, width=5, file="~/Google Drive/Presentations/articulos/ComparativeMethod/BrownianMotionGraph1.pdf")#
+plot(t, X, type="l", ylim=c(-3,3), cex.lab=0.8, cex.axis=0.8, xlab="Time")#
+dev.off()
+x <- read.table("~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/2shifts_NuriAgaves/3shift_BBcladeA1_A2_B1_2016.10.26.xls", header=TRUE)
+x
+x <- read.table("~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/3shifts_NuriAgaves/3shift_BBcladeA1_A2_B1_2016.10.26.xls", header=TRUE)
+x
+pars <- c(3,4,3,3,3,4,2)
+aicc <- c()
+for(i in 1:nrow(x)){#
+	print(i)#
+	aicc <- c(aicc, jointAIC6(p=pars[i], jointLH=x[i,"LH"], nobs=2))# tomando como nobs un número que no anule nobs-p-1#
+}#
+aicc
+source('~/Google Drive/GoogleDrive.7nov2014/Analysis/Diversification/Morlon2011&Condamine/jointAIC_2016.10.23_V6.R')
+aicc <- c()#
+for(i in 1:nrow(x)){#
+	print(i)#
+	aicc <- c(aicc, jointAIC6(p=pars[i], jointLH=x[i,"LH"], nobs=2))# tomando como nobs un número que no anule nobs-p-1#
+}#
+aicc
+daicc <- aicc-min(aicc)#
+xnew <- cbind(x,AICc_new=aicc, deltaAICc_new=daicc)#
+index <- order(aicc)#
+xnew <- xnew[index,]#
+xnew
+file.name <- "3shift_BBcladeA1_A2_B1_2016.10.26_new.xls"
+setwd("~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/3shifts_NuriAgaves")
+write.table(xnew, file=file.name, sep="\t", quote=FALSE, row.names=FALSE)
+n.parameters <- 3+3+2+3#
+jointLik <- 23.08048906+-46.4985469+-20.9989552+-8.256736602#
+jointLik
+jointAIC6(p=n.parameters, jointLH=jointLik, nobs=Ntip(agave))
+agave <- read.nexus("~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/Archivos11.2013/Agave5_14Nov13.TreeAnnOut")
+jointAIC6(p=n.parameters, jointLH=jointLik, nobs=Ntip(agave))

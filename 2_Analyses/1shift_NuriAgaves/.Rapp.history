@@ -1,0 +1,3 @@
+devtools::load_all(~/Desktop/datelife/)
+devtools::load_all("~/Desktop/datelife/")
+x3 <- tree_fix_brlen(tree = plant_bold_otol_tree, fixing_criterion = "negative", fixing_method = "mrbayes")
