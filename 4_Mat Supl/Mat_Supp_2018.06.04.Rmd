@@ -19,7 +19,7 @@ x <- lapply(c("knitr", "kableExtra", "ape"), library, character.only = TRUE)
 
 ```{r echo = FALSE, results = 'asis', warning=FALSE}
 table_files <- paste0(
-  "~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/2016.10/Revision_Diversificacion_NuriAgaves_2016.10/",
+  "~/GoogleDrive/GoogleDrive.7nov2014/Analysis/Nuria/agave_bat_diversification/2_Analyses/",
   c("agavaceae.crown.whole_2016.10.19.xls",
   paste0("1shift_NuriAgaves/",
   c("1shift_BBcladeA_2016.10.19.xls",
@@ -94,7 +94,7 @@ jointAIC6 <- function(jointLH, p, nobs){
 	return(JointAICc)
 }
 
-agave <- ape::read.nexus("~/Google Drive/GoogleDrive.7nov2014/Analysis/Nuria/Archivos11.2013/Agave5_14Nov13.TreeAnnOut")
+agave <- ape::read.nexus("~/GoogleDrive/GoogleDrive.7nov2014/Analysis/Nuria/agave_bat_diversification/1_Data/Agave5_14Nov13.TreeAnnOut")
 
 clade_code_names <- c("cladeA", "cladeA1", "cladeA2", "cladeB", "cladeB1", "cladeB2")
 clade_names <- list(cladeA = "_Agave s.l._ + _Furcraea_/_Beschorneria_",
@@ -187,7 +187,7 @@ In some cases, model fitting analyses result in negative speciation and/or extin
 
 # No shifts in diversification dynamics evaluated with RPANDA
 
-### Table S1. Agavoideae _sensu stricto_ from crown age.
+### Table S1. Agavoideae from crown age.
 
 ```{r echo = FALSE, results = 'asis', warning=FALSE, fig.align = "left", fig.height= 3}
 # table_captions <- vector(mode = "list")
@@ -202,7 +202,7 @@ y_limA <- rep(-1, 27)
 names(y_limA) <- c("1", "2a", "2b", "3a", "3b", "4a", "4b", "5a", "5b", "6a", "6b", "7a", "7b", as.character(8:21))
 y_limB <- c(3, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2, rep(1, 7), rep(2, 4), 1, 1.5, 1, 2)
 names(y_limB) <- names(y_limA)
-cat("\n", "### Figure S1. Agavoideae _sensu stricto_ diversification rate through time plots. Rates estimated from crown group age.", "\n")
+cat("\n", "### Figure S1. Agavoideae  diversification rate through time plots. Rates estimated from crown group age.", "\n")
 # rates is a data.frame or list
 plot.divratett(rates = all_tables$whole, span = c(stem_times[1],0), x_lim = c(16,0), y_lim = c(y_limA[1], y_limB[1]))
   # box("outer", lty="solid", col="green")
